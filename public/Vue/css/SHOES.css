@@ -1,0 +1,432 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans",sans-serif;
+}
+html, body {
+      cursor: url(../Images/cursor.png), auto !important;
+}
+
+body{
+  transition: 0.6s linear;
+}
+
+.product{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+.all{
+  margin: 10px;
+  margin-top: 10px;
+}
+.product-card{
+  width: 222px;
+  background: #ecedef;
+  padding: 40px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.product-card h1{
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+.product-card p{
+  font-size: 13px;
+  color: #bbb;
+  text-align: center;
+}
+.product-card img{
+  width: 100%;
+  margin: -48px 0px 10px 0;
+}
+
+.product-info{
+  align-items: center;
+  justify-content: center;
+}
+.product-price{
+  color: #7ed6df;
+  font-size: 26px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+.product-button{
+  margin-left: auto;
+  color: #7ed6df;
+  text-decoration: none;
+  border: 2px solid;
+  padding: 8px 24px;
+  margin: 0 5px;
+  border-radius: 20px;
+  transition: .4s linear;
+  font-size: 10px;
+}
+img:hover{
+  transform: scale(1.4) rotate(-15deg);
+}
+.product-button:hover{
+  transform: scale(1.06);
+}
+.aa a{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width:960px) {
+  .product{
+    flex: 33.33%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .product{
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .product{
+    flex: 100%;
+  }
+}
+.info{
+  margin: 0 300px;
+  font-family: poppins,sans-serif;
+}
+.info p{
+  line-height: 22px;
+  margin-bottom: 16px;
+  color: #aaa;
+}
+
+.abt{
+  text-align: center;
+}
+.abt h1{
+  font-size: 60px;
+  font-family: poppins,sans-serif;
+  color: #707070;
+}
+
+
+
+
+
+
+
+
+/*--------------- navigation --------------- */
+
+.nav {
+      width: 100%;
+      height: 80px;
+      position: fixed;
+      z-index: 3;
+      background: #161616;
+}
+
+.nav.scrolled {
+      background-color: #161616 !important;
+      transition: background-color 500ms linear;
+}
+
+.nav #brand {
+      float: left;
+      display: block;
+      margin-left: 40px;
+      line-height: 80px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 18px;
+}
+
+.nav #brand a {
+      text-decoration: none;
+      color: #fff;
+      font-family: Poppins !important;
+      transition: all 500ms ease-out;
+}
+
+.nav #brand a:hover {
+      text-decoration: none;
+}
+
+.nav #menu {
+      float: left;
+      right: 40px;
+      position: fixed;
+}
+
+.nav #menu li {
+      padding-left: 40px;
+      display: inline-block;
+      font-weight: lighter !important;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 80px;
+      position: relative;
+      transition: all 500ms ease-out;
+}
+
+.nav #menu li a {
+      text-decoration: none;
+      font-family: Poppins !important;
+      color: rgb(156, 156, 156);
+      transition: all 500ms ease-out;
+}
+
+.nav #menu li a:hover {
+      text-decoration: none;
+      color: #fff;
+      transition: all 500ms ease-out;
+}
+
+#toggle {
+      position: absolute;
+      right: 40px;
+      top: 20px;
+      font-weight: 300;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      float: right;
+      transition: all 0.3s ease-out;
+      visibility: hidden;
+      opacity: 0;
+      cursor: pointer;
+}
+
+.close-btn {
+      position: absolute;
+      right: 30px;
+      font-weight: 300;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 2;
+      top: -2px;
+      line-height: 80px;
+}
+
+#resize {
+      z-index: 2;
+      top: 0px;
+      position: fixed;
+      background: #0f0f0f;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s ease-out;
+      cursor: pointer;
+}
+
+#resize #menu {
+      height: 90px;
+      position: absolute;
+      left: 45%;
+      transform: translateX(-40%);
+      text-align: center;
+      display: table-cell;
+      vertical-align: center;
+}
+
+#resize #menu li {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 50px;
+      text-transform: uppercase;
+      min-height: 50px;
+      font-weight: bold;
+      transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+      margin-top: 140px;
+}
+
+#resize #menu li a {
+      color: #fff;
+      text-decoration: none;
+}
+
+#resize #menu li a:hover {
+      text-decoration: none;
+}
+
+#resize.active {
+      visibility: visible;
+      opacity: 1;
+}
+
+@media(max-width: 900px) {
+      #toggle {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 6px;
+            margin-right: 4px;
+      }
+
+      nav #brand {
+            margin-left: 10px;
+      }
+
+      #resize ul li a {
+            font-size: 15px;
+            font-family: "Poppins" !important;
+            font-weight: lighter !important;
+            color: rgb(156, 156, 156) !important;
+            transition: all 500ms ease-out;
+      }
+
+      nav #menu {
+            display: none;
+      }
+      
+}
+@media(max-width: 1333px){
+  .info{
+            margin: 0 100px;
+      }
+}
+@media(max-width: 645px){
+  .info{
+            margin: 0 40px;
+      }
+}
+
+@media(min-width: 900px) {
+      #resize {
+            visibility: hidden !important;
+      }
+}
+/*--------------- Add Shoes --------------- */
+
+
+      form
+      {
+        align-items: center;
+        margin: 25px 500px 0 500px;
+        font-family: Poppins, serif;
+      }
+      #legend h1{
+        text-align: center;
+        color: #707070;
+        font-size: 60px;
+      }
+      input 
+      {
+        border:none;
+        outline: none;
+        width: 100%;
+        font-size: 20px;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid #707070;
+        margin:0 0 60px 0;
+      }
+      #btnE
+      {
+        margin: 0;
+        border-bottom: none;
+        width: 50%;
+        font-size: 31px;
+        margin-left: 110px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      
+      .errur
+      {
+        position: absolute;
+        top: 1887px;
+        right: 791px;
+        color: red;
+      }
+      .errur1
+      {
+        position: absolute;
+        top: 1970px;
+        right: 822px;
+        color: red;
+      }
+      .errur2
+      {
+        position: absolute;
+        top: 2054px;
+        right: 800px;
+        color: red;
+      }
+      .errur3
+      {
+        position: absolute;
+        top: 2138px;
+        right: 838px;
+        color: red;
+      }
+      .errur4
+      {
+        position: absolute;
+        top: 2222px;
+        right: 805px;
+        color: red;
+      }
+
+/*--------------- footer section starts here --------------- */
+
+.footer {
+      background: #161616;
+}
+
+#media, #address, #mail {
+      text-align: center !important;
+}
+
+.footer .container {
+      padding: 50px 0;
+}
+
+.footer li, h4 {
+      font-size: 24px !important;
+}
+
+.footer h4 {
+      font-weight: lighter;
+      color: #fff;
+}
+
+.footer p {
+      color: grey;
+      font-weight: lighter;
+}
+
+.footer li {
+      font-weight: lighter;
+      color: #fff;
+      padding-left: 20px;
+      font-size: 18px !important;
+      cursor: pointer;
+
+}
+
+#media ul {
+      list-style: none;
+}
+
+#media ul li {
+      display: inline-block;
+}
+
+@media(max-width: 900px) {
+      .footer .container {
+            width: 92% !important;
+      }
+}
