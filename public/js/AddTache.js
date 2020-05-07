@@ -1,8 +1,9 @@
 $(document).ready(function () {
     // Load Data
     getData();
+
     // Save tache
-    $("#SaveData").click(function () { // Recuperation des valeurs
+    $("#SaveData").click(function () {
 
         var name = $("#name").val();
         var Description = $("#Description").val();
@@ -23,13 +24,13 @@ $(document).ready(function () {
                     if (response.request) {
                         //send fetched
                         getData(response);
+                        //remove what was writting in input
                         $("#name").val('');
                         $("#Description").val('');
                         $("#Status").val('');
                         $("#img").val('');
                     }
                 }
-
             });
         }
     });
@@ -52,7 +53,6 @@ function getData(fetched) {
         AddCards(fetched.data);
     }
 }
-
 
 function AddCards(data) {
 
